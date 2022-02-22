@@ -7,12 +7,14 @@ edition = "2021"
 
 [dependencies]
 mongodb = "=2.1.0"
-mongodb_2_2_0 = { git = "https://github.com/mongodb/mongo-rust-driver", branch = "master", package = "mongodb" }
+# mongodb_2_2_0 = { git = "https://github.com/mongodb/mongo-rust-driver", branch = "master", package = "mongodb" }
+mongodb_2_2_0 = { path = "/home/patrick/mongo-rust-driver", package = "mongodb" }
 bson_2_2_0 = { git = "https://github.com/mongodb/bson-rust", branch = "master", package = "bson" }
 tokio = { version = "1", features = ["full"] }
 futures = "0.3"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
+serde_bytes = "0.11"
 
 [dev-dependencies]
 criterion = { version = "0.3.5", features = ["async_tokio", "html_reports"] }
